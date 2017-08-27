@@ -1,6 +1,6 @@
 {
     "name": "absuite/suite-bec",
-    "description": "gmf bec model for laravel5",
+    "description": "suite bec model for laravel5",
 	"license": "MIT",
     "authors": [
         {
