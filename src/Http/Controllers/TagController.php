@@ -45,7 +45,7 @@ class TagController extends Controller {
 	 * @return [type]           [description]
 	 */
 	public function update(Request $request, $id) {
-		$input = $request->intersect(['code', 'name', 'short_name', 'country', 'is_effective']);
+		$input = $request->only(['code', 'name', 'short_name', 'country', 'is_effective']);
 		$input = InputHelper::fillEntity($input, $request, ['country']);
 
 		if ($validator->fails()) {
