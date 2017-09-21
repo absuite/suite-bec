@@ -23,6 +23,18 @@ class ServiceProvider extends BaseServiceProvider {
 			$this->publishes([
 				__DIR__ . '/../resources/assets/sass' => base_path('resources/assets/sass/vendor/suite-bec'),
 			], $publishes);
+
+			$this->publishes([
+				__DIR__ . '/../database/seeds' => base_path('database/seeds'),
+				__DIR__ . '/../database/preseeds' => base_path('database/preseeds'),
+				__DIR__ . '/../database/postseeds' => base_path('database/postseeds'),
+			], $publishes);
+
+			$this->publishes([
+				__DIR__ . '/../database/sqls' => base_path('database/sqls'),
+				__DIR__ . '/../database/presqls' => base_path('database/presqls'),
+				__DIR__ . '/../database/postsqls' => base_path('database/postsqls'),
+			], $publishes);
 		}
 	}
 
