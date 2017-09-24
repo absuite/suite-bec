@@ -5,7 +5,7 @@ use Illuminate\Database\Seeder;
 use Suite\Bec\Models;
 
 class BecPriceSeeder extends Seeder {
-	private $entId = '';
+	public $entId = '';
 
 	/**
 	 * Run the database seeds.
@@ -13,7 +13,12 @@ class BecPriceSeeder extends Seeder {
 	 * @return void
 	 */
 	public function run() {
-		$this->entId = config('gmf.ent.id');
+		if (empty($this->entId)) {
+			$this->entId = config('gmf.ent.id');
+		}
+		if (empty($this->entId)) {
+			return;
+		}
 
 		Models\Price::where('ent_id', $this->entId)->delete();
 
