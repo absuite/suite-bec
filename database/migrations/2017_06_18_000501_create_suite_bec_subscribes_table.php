@@ -4,7 +4,7 @@ use Gmf\Sys\Database\Metadata;
 use Illuminate\Database\Migrations\Migration;
 
 class CreateSuiteBecSubscribesTable extends Migration {
-	private $mdID = "60597ca05fb811e79e9cc39423e69291";
+	public $mdID = "60597ca05fb811e79e9cc39423e69291";
 	/**
 	 * Run the migrations.
 	 *

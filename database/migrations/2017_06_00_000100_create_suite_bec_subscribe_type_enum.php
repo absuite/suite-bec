@@ -4,7 +4,7 @@ use Gmf\Sys\Database\Metadata;
 use Illuminate\Database\Migrations\Migration;
 
 class CreateSuiteBecSubscribeTypeEnum extends Migration {
-	private $mdID = "58345bd05fb811e7a3fc2ffae138caf2";
+	public $mdID = "58345bd05fb811e7a3fc2ffae138caf2";
 	/**
 	 * Run the migrations.
 	 *

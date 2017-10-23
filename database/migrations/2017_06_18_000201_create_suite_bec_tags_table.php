@@ -4,7 +4,7 @@ use Gmf\Sys\Database\Metadata;
 use Illuminate\Database\Migrations\Migration;
 
 class CreateSuiteBecTagsTable extends Migration {
-	private $mdID = "cb1669c05bf211e78b5c33d16578dfc5";
+	public $mdID = "cb1669c05bf211e78b5c33d16578dfc5";
 	/**
 	 * Run the migrations.
 	 *

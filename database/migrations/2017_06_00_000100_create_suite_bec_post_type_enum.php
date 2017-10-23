@@ -4,7 +4,7 @@ use Gmf\Sys\Database\Metadata;
 use Illuminate\Database\Migrations\Migration;
 
 class CreateSuiteBecPostTypeEnum extends Migration {
-	private $mdID = "cb1658e05bf211e79d7ce7c4eb1f009f";
+	public $mdID = "cb1658e05bf211e79d7ce7c4eb1f009f";
 	/**
 	 * Run the migrations.
 	 *
