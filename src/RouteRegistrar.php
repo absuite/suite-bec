@@ -28,7 +28,7 @@ class RouteRegistrar {
 	 * @return void
 	 */
 	public function all() {
-		$this->router->group(['prefix' => 'bec', 'middleware' => ['api', 'ent_check']], function ($router) {
+		$this->router->group(['prefix' => 'bec', 'middleware' => ['api', 'ent_check', 'lns_check:bec']], function ($router) {
 
 			$router->resource('posts', 'PostController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 			$router->resource('prices', 'PriceController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
