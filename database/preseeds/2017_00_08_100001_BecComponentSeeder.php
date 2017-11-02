@@ -13,7 +13,6 @@ class BecComponentSeeder extends Seeder {
 	 * @return void
 	 */
 	public function run() {
-		$this->down();
 		$exception = DB::transaction(function () {
 			Models\Component::build(function (Builder $builder) {
 				$builder->code('becStatuteSetting')->name('信息定制');
@@ -27,12 +26,4 @@ class BecComponentSeeder extends Seeder {
 		});
 	}
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down() {
-		Models\Component::where('code', 'like', 'bec.%')->delete();
-	}
 }

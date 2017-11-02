@@ -45,13 +45,4 @@ class BecRolePreSeeder extends Seeder {
 			}
 		}
 	}
-
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down() {
-
-	}
 }

@@ -1,19 +1,29 @@
 {
-    "name": "absuite/suite-bec",
-    "description": "suite bec model for laravel5",
-	"license": "MIT",
-    "authors": [
-        {
-            "name": "absuite",
-            "email": "absuite@qq.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-    },
-    "autoload": {
-        "psr-4": {
-            "Suite\\Bec\\": "src/"
-        }
+  "name": "absuite/suite-bec",
+  "description": "suite bec model for laravel5",
+  "license": "MIT",
+  "authors": [
+  {
+    "name": "absuite",
+    "email": "absuite@qq.com"
+  }],
+  "minimum-stability": "dev",
+  "require":
+  {},
+  "extra":
+  {
+    "laravel":
+    {
+      "providers": [
+        "Suite\\Bec\\ServiceProvider"
+      ]
     }
+  },
+  "autoload":
+  {
+    "psr-4":
+    {
+      "Suite\\Bec\\": "src/"
+    }
+  }
 }

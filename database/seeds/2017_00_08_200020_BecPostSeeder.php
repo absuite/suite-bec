@@ -19,7 +19,9 @@ class BecPostSeeder extends Seeder {
 		if (empty($this->entId)) {
 			return;
 		}
-
+		if (Models\Post::where('ent_id', $this->entId)->count()) {
+			return;
+		}
 		Models\Post::where('ent_id', $this->entId)->delete();
 
 		Models\Post::build(function (Builder $b) {

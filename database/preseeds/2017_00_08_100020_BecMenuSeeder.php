@@ -14,7 +14,6 @@ class BecMenuSeeder extends Seeder {
 	 * @return void
 	 */
 	public function run() {
-		$this->down();
 
 		$exception = DB::transaction(function () {
 			$id = "6267ec905d1d11e7b3e819c5846ba57f";
@@ -63,12 +62,4 @@ class BecMenuSeeder extends Seeder {
 		});
 	}
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down() {
-		Menu::where('code', 'like', 'bec%')->delete();
-	}
 }

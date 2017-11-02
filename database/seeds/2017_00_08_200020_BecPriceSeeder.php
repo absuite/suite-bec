@@ -19,7 +19,9 @@ class BecPriceSeeder extends Seeder {
 		if (empty($this->entId)) {
 			return;
 		}
-
+		if (Models\Price::where('ent_id', $this->entId)->count()) {
+			return;
+		}
 		Models\Price::where('ent_id', $this->entId)->delete();
 
 		Models\Price::build(function (Builder $b) {$b->ent_id($this->entId)->title("3.0mm热轧板卷Q235")->price("4250");});
