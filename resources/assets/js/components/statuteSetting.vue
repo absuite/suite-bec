@@ -7,24 +7,24 @@
           </md-toolbar>
           <md-list>
             <md-list-item>
-              <md-input-container>
+              <md-field>
                 <label>您将订阅哪些行业的知识或者资讯</label>
                 <md-select multiple v-model="industrySelects">
                   <md-option v-for="item in industries" :key="item" :value="item">
                     {{ item.name }}
                   </md-option>
                 </md-select>
-              </md-input-container>
+              </md-field>
             </md-list-item>
             <md-list-item>
-              <md-input-container>
+              <md-field>
                 <label>您关注哪些区域的内容</label>
                 <md-select multiple v-model="areaSelects">
                   <md-option v-for="option in areas" :key="option" :value="option">
                     {{ option.name }}
                   </md-option>
                 </md-select>
-              </md-input-container>
+              </md-field>
             </md-list-item>
           </md-list>
         </md-card-content>

@@ -25,7 +25,7 @@
   </md-part>
 </template>
 <script>
-  import model from '../../gmf-sys/core/mixin/model';
+  import model from 'gmf/core/mixins/MdModel/MdModel';
   export default {
     data() {
       return {
