@@ -2,6 +2,7 @@
 
 namespace Suite\Bec\Http\Controllers;
 
+use GAuth;
 use Gmf\Sys\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Suite\Bec\Models;
@@ -10,7 +11,7 @@ class PostController extends Controller {
 	public function index(Request $request) {
 		$pageSize = $request->input('pageSize', 5);
 		$query = Models\Post::where('is_revoked', '0');
-		$query->where('ent_id', $request->oauth_ent_id);
+		$query->where('ent_id', GAuth::entId());
 		$query->orderBy('date', 'desc');
 		$query->orderBy('created_at', 'desc');
 		if ($request->has('type') && $request->input('type')) {

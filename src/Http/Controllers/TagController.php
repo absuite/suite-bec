@@ -2,10 +2,11 @@
 
 namespace Suite\Bec\Http\Controllers;
 
-use Suite\Bec\Models;
+use GAuth;
 use Gmf\Sys\Http\Controllers\Controller;
 use Gmf\Sys\Libs\InputHelper;
 use Illuminate\Http\Request;
+use Suite\Bec\Models;
 
 class TagController extends Controller {
 	public function index(Request $request) {
@@ -33,7 +34,7 @@ class TagController extends Controller {
 		if ($validator->fails()) {
 			return $this->toError($validator->errors());
 		}
-		$input['ent_id'] = $request->oauth_ent_id;
+		$input['ent_id'] = GAuth::entId();
 
 		$data = Models\Area::create($input);
 		return $this->show($request, $data->id);
